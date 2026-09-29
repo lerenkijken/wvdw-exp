@@ -184,7 +184,7 @@ document.addEventListener("keydown", save_incomplete_data)
     }
   ],
   on_finish: () => {
-    window.reload()
+    window.location.reload()
   }
   });
 
@@ -213,7 +213,7 @@ document.addEventListener("keydown", save_incomplete_data)
   let dynamic_noise_duration = 3000;
   let single_frame_duration = 100;
   let inter_trial_interval = 800;
-  const total_task_duration = 3.2 *(60_000) // 3 minutes   ; 
+  const total_task_duration = 0.2 // 3.2 *(60_000) // 3 minutes   ; 
 
   let main_task_start_time = null;
   let running_trial_number = 0;
@@ -1349,10 +1349,10 @@ document.addEventListener("keydown", save_incomplete_data)
     `,
     questions: [{prompt:
       `<p>Als je wil, kun je hier nog iets meegeven aan de onderzoekers!</p>
-      <p>Klik daarna op de knop eronder om jouw antwoorden op te slaan!</p>`,
+      <p>Klik daarna op de knop eronder om jouw antwoorden op te slaan, en het experiment klaar te zetten voor de volgende bezoeker!</p>`,
       rows:3, placeholder:'Vond je het leuk om mee te doen? Heb je opmerkingen of ideeën? Typ het hier!',
     }],
-    button_label: ['Opslaan en afsluiten'],
+    button_label: ['Opslaan en klaarzetten'],
     data: { phase: 'end_screen' },
     on_finish: (data) => {
       data.score = running_score
