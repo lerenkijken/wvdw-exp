@@ -16,6 +16,7 @@
   <script src="https://unpkg.com/@jspsych/plugin-fullscreen@2.1.0"></script>
   <script src="https://unpkg.com/@jspsych/plugin-survey-text@2.1.0"></script>
   <script src="https://unpkg.com/@jspsych-contrib/plugin-pipe"></script>
+  <script src="https://unpkg.com/@jspsych/extension-pipe@0.2.0"></script>
   <script src="https://unpkg.com/@jspsych/plugin-survey-text@2.1.0"></script>
 
   <link href="https://unpkg.com/jspsych@8.2.2/css/jspsych.css" rel="stylesheet" type="text/css" />
@@ -173,12 +174,25 @@ document.addEventListener("keydown", save_incomplete_data)
 
 
   const jsPsych = initJsPsych({
-
+  extensions: [
+    {
+      type: jsPsychExtensionPipe,
+      params: {
+        experiment_id: "HEqS006hoIeG", 
+        filename: () => filename
+      }
+    }
+  ],
+  on_finish: () => {
+    window.reload()
+  }
   });
 
 
+
+
   const subject_id = jsPsych.randomization.randomID(12);
-  const filename = `${subject_id}.csv`;
+  const filename = `${subject_id}_wvdw.csv`;
 
   
 
@@ -1512,7 +1526,7 @@ document.addEventListener("keydown", save_incomplete_data)
   timeline.push(make_global_imagery_instruction(global_imagery_condition));
   timeline.push(start_main);
   timeline.push(timed_main_task);
-  timeline.push(end_screen, save_data_pipe);
+  timeline.push(end_screen);
 
 
 
