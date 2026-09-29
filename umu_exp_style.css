@@ -1,0 +1,89 @@
+
+input[type='text'] { font-size: 40px; }
+
+html, body {
+  overscroll-behavior: none;
+      -webkit-user-select: none; /* Safari */
+            user-select: none;
+}
+
+
+.jspsych-display-element {
+    background-color: #7a4e17;
+}
+
+.jspsych-content-wrapper {
+    background-image: url("imgs/sandstorm.png");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: contain;
+    color:white;
+    text-shadow: 0.2em 0.2em 0.08em #222222;
+    font-size: 20px; 
+}
+.jspsych-content {
+    transform: translate(50%) -50%;
+}
+
+.jspsych-btn {
+    display: inline-flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 0.2em;
+    font-size: 30px;
+    border: 10px solid transparent;
+    border-radius: 16px;
+    color: white;
+    background-color: #2b00c8d0;
+    padding: 0.2em 1.2em;
+    /*font-family: Malington;*/
+}
+.jspsych-space-hint {
+  display: block;
+  margin-top: 6px;
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 1;
+  color: #ffffffa1;
+  text-shadow: 0.2em 0.2em 0.02em #000000;
+  text-align: center;
+  pointer-events: none;
+  text-shadow:none ;
+}
+.jspsych-space-wrapper {
+  display: inline-flex;
+  flex-direction: column;
+  align-items: center;
+}
+.jspsych-btn:hover {
+  background-color: #2b00c8; 
+  border-color: #2b00c8;
+  color: white;
+}
+.jspsych-btn:disabled {
+  background-color: #2b00c800;
+  color: #aaaaaa00;
+  border-color: #d13d3d00;
+  cursor:auto;
+}
+
+progress {
+  border-radius: 4px; 
+  width: 60%;
+  height: 20px;
+  border-width: 6px;
+  border-color: #000000;
+  /* margin-left: -11.5%; */
+  box-shadow:  0.2em 0.2em 0.08em #222222;
+}
+progress::-webkit-progress-bar {
+  background-color: rgba(233, 152, 60, 0.651);
+  border-radius: 7px;
+
+}
+progress::-webkit-progress-value {
+  background-color: rgba(255, 255, 255, 0.678);
+  border-radius: 4px;
+  /* box-shadow: 1px 1px 5px 3px rgba( 255, 0, 0, 0.8 ); */
+}
+
