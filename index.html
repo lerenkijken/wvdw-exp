@@ -18,7 +18,7 @@
   <script src="https://unpkg.com/@jspsych-contrib/plugin-pipe"></script>
   <script src="https://unpkg.com/@jspsych/extension-pipe@0.2.0"></script>
   <script src="https://unpkg.com/@jspsych/plugin-survey-text@2.1.0"></script>
-
+ 
   <link href="https://unpkg.com/jspsych@8.2.2/css/jspsych.css" rel="stylesheet" type="text/css" />
   <link href="umu_exp_style.css" rel="stylesheet" type="text/css" />
 
@@ -178,7 +178,7 @@ document.addEventListener("keydown", save_incomplete_data)
     {
       type: jsPsychExtensionPipe,
       params: {
-        experiment_id: "HEqS006hoIeG", 
+        experiment_id: "HEqS006hoIeG", // "HEqS006hoIeG", -> for OSF;        'T5wJ3JUh3W64', -> for zenodo
         filename: () => filename
       }
     }
@@ -192,7 +192,7 @@ document.addEventListener("keydown", save_incomplete_data)
 
 
   const subject_id = jsPsych.randomization.randomID(12);
-  const filename = `${subject_id}_wvdw.csv`;
+  const filename = `${subject_id}_wvdw_oct_2.csv`;
 
   
 
@@ -242,8 +242,9 @@ document.addEventListener("keydown", save_incomplete_data)
   });
 
   // add url variables
-  let exp_version = 'version - 1.5.1- (29-09-2026 14:15)'
-  
+  let exp_version = 'version - 1.5.1 (29-09-2026 14:15)'
+  console.log(exp_version)
+
   const url_vars = jsPsych.data.urlVariables()
   
   url_vars['exp_version'] = exp_version
